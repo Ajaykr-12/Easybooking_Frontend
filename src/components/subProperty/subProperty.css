@@ -1,0 +1,54 @@
+.subProperty{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    gap: 20px;
+    
+}
+
+.subProItem{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.spImg{
+    width: 100%;
+    
+}
+
+.spTitle{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.spDistance{
+    font-size: 14px;
+    color: #595959;
+}
+
+.spName{
+    font-weight: bold;
+}
+
+.spCity{
+    font-weight: 300;
+}
+
+.spPrice{
+    font-weight: 500;
+}
+
+.spRating>button{
+    background-color: #003580;
+    color: white;
+    border: none;
+    padding: 3px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.spRating>span{
+    font-size: 14px;
+}

@@ -1,0 +1,139 @@
+.header{
+    background-color: #003580;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.headerContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+}
+.listMode{
+    margin: 20px 0px 0px 0px;
+    
+}
+
+.headerList{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.headerItem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.headerTitle{
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.headerDesc{
+    font-size: 24px;
+    margin: 20px 0px;
+}
+
+.header-btn{
+    color: white;
+    background-color: #0071c2;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.headerSearch{
+    height: 30px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.headerSearchIcon{
+    color: darkgray;
+}
+
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerSearchInput{
+    border: none;
+    outline: none;
+}
+
+.headerSearchInput::-webkit-input-placeholder{
+    font-size: 16px;
+}
+
+.headerSearchText{
+    color: darkgray;
+    cursor: pointer;
+}
+
+.date{
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+
+.searchOption{
+    background-color: white;
+    color: gray;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 8px 0px rgba(133, 180, 242, 0.61);
+    -moz-box-shadow: 0px 1px 8px 0px rgba(133, 180, 242, 0.61);
+    box-shadow: 0px 1px 8px 0px rgba(133, 180, 242, 0.61);
+    z-index: 2;
+}
+
+.searchOptionItems{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.optionCounter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.optinCounterBtn{
+    width: 30px;
+    height: 30px;
+    color: #0071c2;
+    border: 1px solid #0071c2;
+    cursor: pointer;
+    background-color: white;
+}
+
+.optinCounterBtn:disabled{
+    cursor: not-allowed;
+}
