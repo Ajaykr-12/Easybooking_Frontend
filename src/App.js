@@ -4,6 +4,7 @@ import List from "./pages/list/List";
 import Hotel from "./pages/hotel/Hotel";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import "./app.css";
 
 function App() {
   return (

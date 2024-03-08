@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
 import "./list.css";
@@ -19,12 +19,16 @@ function List() {
   const [showDate, setShowDate] = useState(false);
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
+  const { dispatch } = useContext(SearchContext);
 
   const { data, loading, error, reFetch } = useFetch(
-    `/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+    `/hotels?city=${destination}&min=${min || 0}&max=${max || 999999}`
   );
-
   function handleSearchClick() {
+    dispatch({
+      type: "NEW_SEARCH",
+      payload: { city: destination, dates: dates, options: options },
+    });
     reFetch();
   }
 
@@ -38,7 +42,11 @@ function List() {
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input type="text" placeholder={destination} />
+              <input
+                type="text"
+                placeholder={destination}
+                onChange={(e) => setDestination(e.target.value)}
+              />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>

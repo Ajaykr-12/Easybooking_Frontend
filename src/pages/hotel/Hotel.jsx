@@ -151,14 +151,16 @@ function Hotel() {
                 <p className="hotelDesc">{data.desc}</p>
               </div>
               <div className="hotelDetailsPrice">
-                <h1>Perfect for {days} night stay</h1>
+                <h1>Perfect for {days ? days : "1"} night stay</h1>
                 <span>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Ullam, adipisci?
                 </span>
                 <h2>
-                  <b>₹{days * data.cheapestPrice * options.room}</b> ({days}{" "}
-                  nights)
+                  <b>
+                    ₹{(days ? days : "1") * data.cheapestPrice * options.room}
+                  </b>{" "}
+                  ({days ? days : "1"} nights)
                 </h2>
                 <button onClick={handleReserveClick}>
                   Reserve or book now!

@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 function Features() {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=bangalore,chennai,pondy"
+    "/hotels/countByCity?cities=bangalore,chennai,puducherry"
   );
   return (
     <div className="features">

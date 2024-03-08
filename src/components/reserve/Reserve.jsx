@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { SearchContext } from "../../context/SearchContext";
 import useFetch from "../../hooks/useFetch";
-import axios from "axios";
+import axios from "../../config/axios.js";
 import { useNavigate } from "react-router-dom";
 
 function Reserve({ id, setOpen }) {
