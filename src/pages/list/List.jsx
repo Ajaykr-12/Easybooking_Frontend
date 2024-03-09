@@ -45,7 +45,9 @@ function List() {
               <input
                 type="text"
                 placeholder={destination}
-                onChange={(e) => setDestination(e.target.value)}
+                onChange={(e) =>
+                  setDestination(e.target.value.toLocaleLowerCase())
+                }
               />
             </div>
             <div className="lsItem">

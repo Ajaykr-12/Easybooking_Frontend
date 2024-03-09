@@ -101,7 +101,9 @@ function Header(props) {
                   type="text"
                   placeholder="where are you going"
                   className="headerSearchInput"
-                  onChange={(e) => setDestination(e.target.value)}
+                  onChange={(e) =>
+                    setDestination(e.target.value.toLocaleLowerCase())
+                  }
                 />
               </div>
               <div className="headerSearchItem">
