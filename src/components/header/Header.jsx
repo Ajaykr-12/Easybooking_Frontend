@@ -92,7 +92,16 @@ function Header(props) {
             <p className="headerDesc">
               Start booking hotels, homes and more...
             </p>
-            {!user && <button className="header-btn">Sign In/ Register</button>}
+            {!user && (
+              <button
+                className="header-btn"
+                onClick={() => {
+                  navigate("/register");
+                }}
+              >
+                Sign In/ Register
+              </button>
+            )}
 
             <div className="headerSearch">
               <div className="headerSearchItem">
